@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.08.2
+%define		kdeappsver	25.08.3
 %define		qtver		6.8.0
 %define		kframever	6.13.0
 %define		kaname		kimagemapeditor
 Summary:	An HTML image map editor
 Name:		ka6-%{kaname}
-Version:	25.08.2
-Release:	2
+Version:	25.08.3
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	d428b76d14b8a36696acc820a6736331
+# Source0-md5:	ae8202f465947338042bad70ac8d194f
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= %{qtver}
@@ -88,7 +88,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS INSTALL NEWS README TODO
 %attr(755,root,root) %{_bindir}/kimagemapeditor
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/parts/kimagemapeditorpart.so
+%{_libdir}/qt6/plugins/kf6/parts/kimagemapeditorpart.so
 %{_desktopdir}/org.kde.kimagemapeditor.desktop
 %{_iconsdir}/hicolor/*x*/apps/*.png
 %{_iconsdir}/hicolor/*x*/actions/*.png
