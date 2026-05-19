@@ -46,6 +46,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 An HTML image map editor.
 
+%description -l pl.UTF-8
+Edytor htmlowych image map.
+
 %prep
 %setup -q -n %{kaname}-%{version}
 
